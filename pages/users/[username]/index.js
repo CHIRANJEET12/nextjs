@@ -1,17 +1,14 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
-// Simulate fetching user data dynamically based on the username from the URL
 const useUser = (username) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        // Simulate an API call to fetch user data
         if (username) {
             setLoading(true);
             setTimeout(() => {
-                // Mock user data (replace this with a real API call)
                 setUser({ username });
                 setLoading(false);
             }, 1000);
