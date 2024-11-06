@@ -1,4 +1,12 @@
+import { useSession,signIn,signOut } from "next-auth/react";
+
+
 const UserPage = (props)=>{
+    const session = useSession();
+    if(session.data===null){
+        return <button onClick={signIn}>Login</button>
+    }
+    console.log(session);
     return (
         <div>
             <h1>Userpage (ssg)</h1>

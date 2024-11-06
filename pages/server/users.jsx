@@ -1,3 +1,5 @@
+import { useSession } from "next-auth/react";
+
 const userpage = (props)=>{
     console.log(props);
     return (
